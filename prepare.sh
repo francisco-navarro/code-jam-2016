@@ -1,5 +1,9 @@
 #!/bin/bash
 
-f [ "$1" -gt "-1" ]
-  then echo "Introduce un parametro"
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
 fi
+
+PROJ=$1
+
+tar -zcvf toSend/`echo $PROJ`.tar.gz $PROJ 
