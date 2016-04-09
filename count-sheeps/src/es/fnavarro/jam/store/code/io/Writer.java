@@ -4,21 +4,23 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.Collection;
+import java.util.HashSet;
 
-import es.fnavarro.jam.store.code.domain.Document;
-import es.fnavarro.jam.store.code.domain.Document.Case;
+import es.fnavarro.jam.store.code.domain.Sheeps;
 
 public class Writer {
 	
 	private static final boolean WRITE_COUNT = false;
 	
-	private Document document;
+	private Sheeps document;
 	private int countLines = 0;
 	private File output;
 	FileWriter writer = null;
 	private String inputName;
+	private static final int N = 200;
 
-	public Writer(Document document, File output, String inputName) {
+	public Writer(Sheeps document, File output, String inputName) {
 		this.document = document;
 		this.output = output;
 		this.inputName = inputName;
@@ -47,19 +49,41 @@ public class Writer {
 		int endLine = 0;
 		for(int i = 0; i<document.count(); i++){			
 			writeLine(i, document.getCases()[i]);					
-		}
-		
-		
+		}		
 	}
 	
-	private void writeLine(int i, Case case1) throws Exception {
+	
+	private void writeLine(int i, int case1) throws Exception {
 		countLines++;
 		writer.write("Case #"+(1+i)+": ");
-		writer.write(case1.toString());
+		writer.write(caseResult(case1));
 		newLine();
 	}
 
 	
+	private String caseResult(int c) {
+		HashSet<Integer> numbers = new HashSet<>();
+		for(int i=1;i<N;i++){
+			if(getNumbers(c*i, numbers)!=null){
+				return Integer.toString(c*i);
+			}
+		}
+		
+		return "INSOMNIA";
+	}
+	
+	private int last;
+	private Integer getNumbers(int number,HashSet<Integer> counted) {
+		String numberStr = Integer.toString(number);		
+		for(char c : numberStr.toCharArray()){
+			counted.add( Character.getNumericValue(c));
+			if(counted.size()==10){
+				return Character.getNumericValue(c);
+			}
+		}
+		return null;
+	}
+
 	private void newLine() throws IOException{
 		writer.write('\n');
 	}

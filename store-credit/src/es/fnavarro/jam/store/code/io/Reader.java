@@ -20,21 +20,25 @@ public class Reader {
 			reader = new BufferedReader(new FileReader(f));
 			
 			String line = reader.readLine();
+			int cases = Integer.parseInt(line);
 			
-			System.out.println( "Reading file "+f.getAbsolutePath()+"\n\t ");
-			Document document = new Document();
+			System.out.println( "Reading file "+f.getAbsolutePath()+"\n\t with "+cases+" cases");
+			Document document = new Document(cases);
 			
-			while((line=reader.readLine())!=null){
+			for(int i =0; i<cases; i++){			
 				//document....
+				String credit = reader.readLine();
+				String nItems = reader.readLine();
+				String products = reader.readLine();
+				
+				document.addCase(credit,nItems,products);
 			}
 			
 			return document;
 			
 		}finally{
 			reader.close();
-		}
-		
-		
+		}		
 	}
 
 

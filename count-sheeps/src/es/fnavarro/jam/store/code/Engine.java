@@ -3,12 +3,12 @@ package es.fnavarro.jam.store.code;
 import java.io.File;
 import java.util.Date;
 
-import es.fnavarro.jam.store.code.domain.Document;
+import es.fnavarro.jam.store.code.domain.Sheeps;
 import es.fnavarro.jam.store.code.io.Reader;
 import es.fnavarro.jam.store.code.io.Writer;
 
 public class Engine {
-	private Document document;
+	private Sheeps document;
 	private File file;
 	private File output;
 
@@ -47,9 +47,9 @@ public class Engine {
 		return this;
 	}
 	
-	public void write(String inputName) throws Exception{
+	public void write(String name) throws Exception{
 		
-		new Writer(document, output, inputName).write();		
+		new Writer(document, output, name).write();		
 		System.out.println("Writed "+output.getAbsolutePath());
 		
 		output.delete();
