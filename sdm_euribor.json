@@ -3,42 +3,42 @@
 			"BOEDate" : 1467441643000,
 			"tin": 0,
 			"tae": 0,
-			"minOpeningFee": 600,
+			"minOpeningFee": 0,
 			"validUntil": {
 				"fixedMortgage": [1469954609000,1469954609000,1469954609000],
 				"mixedMortgage": [0,1469954609000,1469954609000],
 				"variableMortgage": [0,1469954609000,1469954609000]
 			},
 			"fixedMortgage":  [
-				{ "y": 15, "tin": 1.90,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600} },
-				{ "y": 20, "tin": 2.25,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 } },
-				{ "y": 25, "tin": 2.50,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 } },
-				{ "y": 30, "tin": 2.75,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 } }
+				{ "y": 15, "tin": 1.90,"openingFee": { "amount": 0.00, "reference" : "percent" } },
+				{ "y": 20, "tin": 2.25,"openingFee": { "amount": 0.00, "reference" : "percent" } },
+				{ "y": 25, "tin": 2.50,"openingFee": { "amount": 0.00, "reference" : "percent" } },
+				{ "y": 30, "tin": 2.75,"openingFee": { "amount": 0.00, "reference" : "percent" } }
 			],
 			"fixedUniqueMortgage":  [
-				{ "y": 15, "tin": 2.30,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }  },
-				{ "y": 20, "tin": 2.65,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }  },
-				{ "y": 25, "tin": 2.90,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }  },
-				{ "y": 30, "tin": 3.15,"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }  }
+				{ "y": 15, "tin": 2.30,"openingFee": { "amount": 0.00, "reference" : "percent" }  },
+				{ "y": 20, "tin": 2.65,"openingFee": { "amount": 0.00, "reference" : "percent" }  },
+				{ "y": 25, "tin": 2.90,"openingFee": { "amount": 0.00, "reference" : "percent" }  },
+				{ "y": 30, "tin": 3.15,"openingFee": { "amount": 0.00, "reference" : "percent" }  }
 			],
 			"mixedMortgage": [{
 					"initialPeriod": 120,
 					"rates": [2, 1.25],
-					"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }
+					"openingFee": { "amount": 0.00, "reference" : "percent" }
 				}, {
 					"initialPeriod": 120,
 					"rates": [2, 1.15],
-					"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }
+					"openingFee": { "amount": 0.00, "reference" : "percent" }
 				}
 			],
 			"variableMortgage": [{
 					"initialPeriod": 24,
 					"rates": [1.75, 1.25],
-					"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }
+					"openingFee": { "amount": 0.00, "reference" : "percent" }
 				},{
 					"initialPeriod": 24,
 					"rates": [1.15, 1.15],
-					"openingFee": { "amount": 0.01, "reference" : "percent", "min": 600 }
+					"openingFee": { "amount": 0.00, "reference" : "percent" }
 				}
 			]
 	}
