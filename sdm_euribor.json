@@ -5,9 +5,9 @@
 			"tae": 0,
 			"minOpeningFee": 0,
 			"validUntil": {
-				"fixedMortgage": [1469954609000,1469954609000,1469954609000],
-				"mixedMortgage": [0,1469954609000,1469954609000],
-				"variableMortgage": [0,1469954609000,1469954609000]
+				"fixedMortgage": [1472644982000, 1472644982000, 1472644982000],
+				"mixedMortgage": [0,1472644982000, 1472644982000],
+				"variableMortgage": [0,1472644982000, 1472644982000]
 			},
 			"fixedMortgage":  [
 				{ "y": 15, "tin": 1.90,"openingFee": { "amount": 0.00, "reference" : "percent" } },
